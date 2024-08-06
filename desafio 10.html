@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aula Back-Ende 3º Ano - Polo Arapongas</title>
+</head>
+
+<body>
+    <h1>Faça uma venda e mostre o resultado da mesma em forma de mensagem na tela:</h1>
+    <button onclick="calcular()">Faça a venda!</button>
+
+    <script>
+        function calcular() {
+            let produto = (window.prompt('Qual produto comprado?   :'))
+            let valor = Number(window.prompt('Digite um valor do mesmo' ))
+            let valorpago = Number(window.prompt('Digite um valor pago no caixa :'))
+            window.alert(`Oproduto escolhido foi ${produto}, seu valor na loja é de
+             ${valor.toFixed(2)}, ${valorpago.toFixed(2) - valor.tofixed(2)} `)
+        }
+    </script>
+</body>
+</html>
