@@ -13,15 +13,18 @@
            <p>Oresultado vai aparecer aqui...</p>
     </section>
     <script>
-        function Bhaskara() {
+         function Bhaskara() {
             let a = Number(window.prompt(`Qual foi a primeira nota de ?`))
             let b = Number(window.prompt(`Qual foi a segunda nota de ?`))
             let c = Number(window.prompt(`Qual foi a terceira nota de ?`))          
             delta = b*b-4*a*c 
-           
+            raizneg = (-b-Math.sqrt(delta))/(2*a)
+            raizpos = (-b+Math.sqrt(delta))/(2*a)
 
             let res = document.getElementById('situacao')
             res.innerHTML = `<p>Calculando a média final de <mark>${delta}</mark>.</p>`
+            res.innerHTML += `<p>O resultadado da raiz negativa é <mark>${raizneg}</mark>.</p>`
+            res.innerHTML += `<p>O resultadado da raiz positiva é <mark>${raizpos}</mark>.</p>`
         }
     </script>
 
