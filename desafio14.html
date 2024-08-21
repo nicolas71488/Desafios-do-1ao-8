@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula Back-End 3 Ano - Polo Arapongas</title>
+</head>
+<body>
+        <h1>Calcule se esta reprovado de recuperação ou aprovado o Aluno:</h1>
+
+    <button onclick="Nota()">aqui sai o resultado:</button>
+
+    <section id="situacao">
+        <p>O resultado vai aparecer aqui...</p>
+ </section>
+
+    <script>
+        function Nota() {
+            cont=1;
+            var media = 0;
+            let nome = window.prompt(`Qual a nome do aluno ${cont}?`)
+
+            while (cont <=4) {
+                var notas = parseFloat(prompt(`Qual a nota ${cont}?`))
+                media=media+notas;
+                cont ++
+            }
+            media=media/4
+
+            if (media >=60) {
+                result = "Aprovado"
+            } else {
+                if (media >=30) {
+                    result = "Recuperacao"
+                }
+                else {
+                    result = "reprovado"
+                }
+            }
+        
+            let res = document.getElementById('situacao')
+            res.innerHTML = `<p>O aluno ${nome} está com a media ${media} e ficou de ${result} </p>`
+        }
+    </script>
+</body>
+</html>
