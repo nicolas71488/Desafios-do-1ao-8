@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #636363, #ffff00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+form {
+    margin: 0 auto;
+    width: 50%; /* Ajuste a largura conforme necessário */
+}
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
