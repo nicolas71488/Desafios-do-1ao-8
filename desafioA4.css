@@ -1,0 +1,9 @@
+/* Adicione aqui seus estilos CSS para personalizar a aparência da página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), #ff0);
+  }
