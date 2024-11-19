@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #8e44ad, #ffffff);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: right;
+    width: 65%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
