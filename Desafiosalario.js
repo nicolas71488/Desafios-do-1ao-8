@@ -1,35 +1,18 @@
-const form = document.getElementById('form');
-const tabelaBody = document.getElementById('tabela').querySelector('tbody');
+// script.js
+function calcular() {
+    // ... código existente ...
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const nome = document.getElementById('nome').value;
-    const salarioBruto = parseFloat(document.getElementById('salario').value);
-
-    let impostoDeRenda;
-    if (salarioBruto > 5000) {
-        impostoDeRenda = salarioBruto * 0.175;
-    } else if (salarioBruto > 4000) {
-        impostoDeRenda = salarioBruto * 0.12;
-    } else if (salarioBruto > 3000) {
-        impostoDeRenda = salarioBruto * 0.075;
-    } else if (salarioBruto > 1800) {
-        impostoDeRenda = salarioBruto * 0.035;
-    } else {
-        impostoDeRenda = 0;
+    // Adicionando validação básica
+    if (nome === "" || salarioBruto <= 0) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
     }
 
-    const salarioLiquido = salarioBruto - impostoDeRenda;
+    // ... restante do código ...
+}
 
-    const novaLinha = document.createElement('tr');
-    novaLinha.innerHTML = `
-        <td>${nome}</td>
-        <td>${salarioBruto.toFixed(2)}</td>
-        <td>${impostoDeRenda.toFixed(2)}</td>
-        <td>${salarioLiquido.toFixed(2)}</td>
-    `;
-    tabelaBody.appendChild(novaLinha);
-
-    form.reset();
-});
+function limpar() {
+    document.getElementById("nome").value = "";
+    document.getElementById("salario").value = "";
+    document.getElementById("resultados").innerHTML = "";
+}
