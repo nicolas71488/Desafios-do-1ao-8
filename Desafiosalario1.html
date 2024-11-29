@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora de Salário</title>
-    <link rel="stylesheet" href="Desafiosalario1.css">
+    <title>Folha de Pagamento</title>
+    <link rel="stylesheet" href="body.css">
 </head>
 <body>
-    <h1>Calculadora de Salário</h1>
-
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome">
-
-    <label for="salarioBruto">Salário Bruto:</label>
-    <input type="number" id="salarioBruto">
-
-    <button onclick="calcularSalario()">Calcular</button>
-
-    <div id="resultado"></div>
-
-    <script src="Desafiosalario1.js"></script>
+    <div class="container">
+        <img src="corinthians.png" alt="Sua Logo" class="logo">
+        <h1>Calculadora de Folha de Pagamento</h1>
+        <form id="form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="salario">Salário Bruto:</label>
+            <input type="number" id="salario" name="salario">
+            <button type="submit">Calcular</button>
+        </form>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Salário Bruto</th>
+                    <th>Imposto de Renda</th>
+                    <th>Salário Líquido</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="const form = document.js"></script>
 </body>
 </html>
