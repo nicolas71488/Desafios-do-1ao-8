@@ -1,33 +1,32 @@
-/* styles.css */
 body {
-    background: linear-gradient(to right, #8E44AD, #FFFFFF);
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #8E44AD, #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1  2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
     float: right;
     width: 100px;
-    height: 50px;
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
 th, td {
-    text-align: left;
     padding: 8px;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: 1  #f2f2f2;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
