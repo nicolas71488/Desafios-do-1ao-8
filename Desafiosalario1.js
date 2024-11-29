@@ -1,5 +1,5 @@
-const form = document.getElementById('form');
-const tabelaBody = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+const form = document.getElementById('form-pagamento');
+const resultado = document.getElementById('resultado');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -7,26 +7,24 @@ form.addEventListener('submit', (event) => {
     const nome = document.getElementById('nome').value;
     const salarioBruto = parseFloat(document.getElementById('salario').value);
 
-    let impostoDeRenda;
+    let imposto = 0;
     if (salarioBruto > 5000) {
-        impostoDeRenda = salarioBruto * 0.175;
+        imposto = salarioBruto * 0.175;
     } else if (salarioBruto > 4000) {
-        impostoDeRenda = salarioBruto * 0.12;
+        imposto = salarioBruto * 0.12;
     } else if (salarioBruto > 3000) {
-        impostoDeRenda = salarioBruto * 0.075;
+        imposto = salarioBruto * 0.075;
     } else if (salarioBruto > 1800) {
-        impostoDeRenda = salarioBruto * 0.035;
-    } else {
-        impostoDeRenda = 0;
+        imposto = salarioBruto * 0.035;
     }
 
-    const salarioLiquido = salarioBruto - impostoDeRenda;
+    const salarioLiquido = salarioBruto - imposto;
 
-    const novaLinha = tabelaBody.insertRow();
-    novaLinha.insertCell(0).textContent = nome;
-    novaLinha.insertCell(1).textContent = salarioBruto.toFixed(2);
-    novaLinha.insertCell(2).textContent = impostoDeRenda.toFixed(2);
-    novaLinha.insertCell(3).textContent = salarioLiquido.toFixed(2);
-
-    form.reset();
+    resultado.innerHTML = `
+        <h2>Resultado</h2>
+        <p>Nome: ${nome}</p>
+        <p>Salário Bruto: R$ ${salarioBruto.toFixed(2)}</p>
+        <p>Imposto de Renda: R$ ${imposto.toFixed(2)}</p>
+        <p>Salário Líquido: R$ ${salarioLiquido.toFixed(2)}</p>
+    `;
 });
