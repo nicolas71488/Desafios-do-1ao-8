@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Folha de Pagamento</title>
     <link rel="stylesheet" href="Desafiosalario.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <img src="corinthians.png" alt="Sua Logo" class="logo">
+    </header>
+    <main>
         <h1>Calculadora de Folha de Pagamento</h1>
-        <form id="form">
+        <form id="form-pagamento">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome">
+            <input type="text" id="nome" required>
             <label for="salario">Salário Bruto:</label>
-            <input type="number" id="salario" name="salario">
+            <input type="number" step="0.01" id="salario" required>
             <button type="submit">Calcular</button>
         </form>
-        <table id="tabela">
+        <table id="tabela-resultados">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -27,7 +31,7 @@
             <tbody>
             </tbody>
         </table>
-    </div>
+    </main>
     <script src="Desafiosalario.js"></script>
 </body>
 </html>
